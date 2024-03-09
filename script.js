@@ -72,7 +72,6 @@ else {
   downloadBtn.addEventListener('click', downloadImage);
 }
 
-
 URL.addEventListener('focus', ()=>{
   downloadBtn.style.opacity = "0"; 
 })
