@@ -100,13 +100,10 @@ button{
     border: 10px solid white;
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:375px) {
     .qr-code-container{
-        width: 320px;
+        width: 270px;
         margin-top: 10px;
     }
 
-    .qr-code-image-container{
-        width: 100%;
-    }
 }
