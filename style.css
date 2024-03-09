@@ -12,10 +12,10 @@ body{
 }
 
 .qr-code-container{
-    width: 420px;
+    width: 320px;
     padding: 24px 12px;
     background-color: #ffffff;
-    margin: 80px auto;
+    margin: 30px auto auto auto;
     border-radius: 24px;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ body{
 
 .qr-code-image-container{
     height: 288px;
-    width: 388px;
+    width: 288px;
     background-color: #2C7DFA;
     margin: 10px auto;
     border-radius: 12px;
@@ -104,6 +104,10 @@ button{
     .qr-code-container{
         width: 270px;
         margin-top: 10px;
+    }
+
+    .qr-code-image-container img{
+        border: 10px solid white;
     }
 
 }
