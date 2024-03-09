@@ -7,29 +7,31 @@
   <title>QR CODE COMPONENT</title>
 </head>
 <body>
-  <div class="qr-code-container">
-    <div class="qr-code-image-container">
-      <div class="upper circle"></div>
-      <div id="qrcode"></div>
-      <button id="downloadBtn" type="button" class="button download-btn">Download</button>
-      <div class="lower circle"></div>
+  <main>
+    <div class="qr-code-container">
+      <div class="qr-code-image-container">
+        <div class="upper circle"></div>
+        <div id="qrcode"></div>
+        <button id="downloadBtn" type="button" class="button download-btn">Download</button>
+        <div class="lower circle"></div>
+      </div>
+      <div class="text">
+        <h1 class="card-title">QR-Code Generator</h1>
+      </div>
+  
+      <div id="popup-window">
+        <h1>Please Enter URL</h1>
+        <p>Enter URL and click Generate</p>
+      </div> 
+  
+      <div class="url-input">
+        <form class="form">
+          <input id="url" type="text" placeholder="Paste Your URL here">
+          <button class="button" type="button" id="submit-btn">Generate</button>
+        </form>
+      </div>
     </div>
-    <div class="text">
-      <h1 class="card-title">QR-Code Generator</h1>
-    </div>
-
-    <div id="popup-window">
-      <h1>Please Enter URL</h1>
-      <p>Enter URL and click Generate</p>
-    </div> 
-
-    <div class="url-input">
-      <form class="form">
-        <input id="url" type="text" placeholder="Paste Your URL here">
-        <button class="button" type="button" id="submit-btn">Generate</button>
-      </form>
-    </div>
-  </div>
+  </main>
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
   <script src="script.js"></script>
 </body>

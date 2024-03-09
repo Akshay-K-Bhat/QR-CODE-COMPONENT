@@ -1,10 +1,7 @@
 const btn = document.getElementById('submit-btn');
 const URL = document.getElementById('url');
-const qrcodeContainer = document.getElementById("qrcode");
-
+const QRCodeContainer = document.getElementById("qrcode");
 const downloadBtn = document.getElementById('downloadBtn');
-
-btn.addEventListener('click', generateQR);
 
 
 downloadBtn.addEventListener("mouseout", function() {
@@ -15,11 +12,10 @@ downloadBtn.addEventListener("mouseout", function() {
 
 function generateQR(){
 
-  if(qrcodeContainer.hasChildNodes()) {
+  if(QRCodeContainer.hasChildNodes()) {
     removeQRCode();
   }
-
-  var qrcode = new QRCode(qrcodeContainer, {
+  var qrcode = new QRCode(QRCodeContainer, {
     text: URL.value,
     width: 200,
     height: 200,
@@ -48,7 +44,7 @@ function removeQRCode(){
 
 function downloadImage() {
   var link = document.createElement('a');
-  link.href =qrcodeContainer.childNodes[1].src;
+  link.href =QRCodeContainer.childNodes[1].src;
   link.download = 'QRCode.jpg';
   document.body.appendChild(link);
   link.click(); 
@@ -61,7 +57,7 @@ function downloadImage() {
 }
 
 
-if(!qrcodeContainer.hasChildNodes()) {
+if(!QRCodeContainer.hasChildNodes()) {
   downloadBtn.addEventListener("click", function() {
     downloadBtn.textContent = "Please enter the URL and Generate QR code";
     downloadBtn.style.opacity = "1"; // Set opacity to 1 when hovering
@@ -75,3 +71,6 @@ else {
 URL.addEventListener('focus', ()=>{
   downloadBtn.style.opacity = "0"; 
 })
+
+
+btn.addEventListener('click', generateQR);
